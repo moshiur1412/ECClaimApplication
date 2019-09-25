@@ -11,9 +11,15 @@ use DB;
 class HomeController extends Controller
 {
 
-  public function __construct()
+  protected $ecClaim;
+  protected $faculty;
+
+  public function __construct(Faculty $faculty, EcClaim $ecClaim)
   {
     $this->middleware('auth');
+    $this->faculty = $faculity;
+    $this->ecClaim = $ecClaim;
+
   }
 
   public function index(Request $request)
@@ -29,15 +35,15 @@ class HomeController extends Controller
    }
 
    $report_id = $request->report_id;
-   $faculites_all = Faculty::all();
-   $faculity = Faculty::find($request->faculty_id);
+   $faculites_all = $this->faculty::all();
+   $faculity = $this->faculty::findOrFail($request->faculty_id);
    $year = $request->academic_year;    
 
 
-   $claim_year = DB::table('ec_claims')->select(DB::raw('YEAR(created_at) year'))->groupBy('year')->orderBy('year', 'desc')->get();
+   $claim_year = $this->ecClaim->groupBy('year')->orderBy('year', 'desc')->get();
 
-   $claim_count = EcClaim::where('evidence_01', '')->count();
-   $date_expare = EcClaim::where('status', 'Date has been expired.')->count();
+   $claim_count = $this->ecClaim->where('evidence_01', '')->count();
+   $date_expare = $this->ecClaim->where('status', 'Date has been expired.')->count();
    return view('home', compact('faculites_all','faculity', 'year', 'report_id','claim_count', 'date_expare','claim_year'));
  }
 }
