@@ -1,9 +1,9 @@
-# EC_Claim (EC Claim)
+# EC Claim Application
 
 -
-EC_Cleam is the subsystem which is developed for your own online profile which can share easily by your own format. In the evaluation of the system that has been trying to deliver the best application within the limitation of time but there was still possible to implement new features and functionality for the best attractive product. Therefore, the project live demo, repository, and screencast video are following below:
+EC Claim Application is the subsystem for the large university which is the based on the roles for collecting and processing of EC Claim. For building the web-based application. In this subsystem, there are four roles who access the system, admin can access the whole system with add assessment and the manager can see the whole system. On the other hand, the student can claim their department assessment subject and EC coordinator can access the EC claim accepted and rejected options. Therefore, the project live demo, repository, and screencast video are following below:
 
-**Version**: 1.0 Release of the EC_Cleam (Online Profile).
+**Version**: 1.0 Release of the EC Claim Application.
 
 - Application Live: https://live-ec-claim.herokuapp.com/
 - Screencast video for live demo presentation without audio:
@@ -14,7 +14,6 @@ EC_Cleam is the subsystem which is developed for your own online profile which c
 ## Table of Contents
 
 - [Overview](#overview)
-- [Problem Domain Area](#problem-Domain-Area)
 - [The Advantages of System](#The-Advantages-of-System)
 - [The Limitations of System](#The-Limitations-of-System)
 - [The System Features List](#system-features-list)
@@ -22,7 +21,6 @@ EC_Cleam is the subsystem which is developed for your own online profile which c
 - [Technologies and Libraries](#technologies-and-libraries)
 - [Further Development](#further-development)
 - [How to run the System](#how-to-run-the-system)
-- [Questions and Answers](#questions-and-answers)
 - [Summary](#summary)
 - [References](#references)
 
@@ -30,51 +28,42 @@ EC_Cleam is the subsystem which is developed for your own online profile which c
 
 ## Overview
 
-This is identified that the project developed as calling name EC_Cleam. The system handles to share your own profile by your own custom format which can share your CV. Therefore, the system is completely run error-free in that checking period.
-
-## Problem Domain Area
-
-- To Share online profile with github link.
+This is identified that the project developed as calling name EC_Cleam. EC Claim is the web-based subsystem which is developed for the university. In the evaluation of the system that has been trying to deliver the best product within the limitation of time but there was still possible to implement new feature and function for a best attractive product. Therefore, here is described the product evaluation and process with strength, weakness and further development of the system.
 
 ## The Advantages of System
 
-- The application is fully responsive.
-- Authenticated by the security route such as web, active and current users based.
-- validation and verification with relevant error and success message.
-- Highly Modern EDGE Technology Used.
-- Custom error messaging with custom error pages.
+- The application is fully responsive for any kinds of a device such as mobile, tables and desktop browsers.
+- Navigation panel also responsible for very simple that is defined by the role-based with common icons which is very helpful for the users.
+- The full system is authenticated by the roles based and security is very high for the LARAVEL default authentication functions.
+- Validation and verification are fully considered of the full system application development which is shown the relevant error or success message.
+- Use highly strong Object Oriented Programming (OOP) LARAVEL5 PHP based framework and used Object-oriented Relational Model (ORM) for the database model design.
 
 ## The Limitations of System
 
 - The system is not used highly graphics and best UX design.
-- Any information can't modify within the single click.
-- Users can't find their following twitch name in real time just like Twitch.
-- The system didn't config any mailing system for notifications.
+- Faculty name, department name can’t have deleted through the role.
+- Any information can’t modify by the single click.
+- There is no way for user profile information updated features.
+- The system is not used emailing and notification process.
 
 ## The System Features List
 
-- login and Registration
-- Effective Dashboard
-- Post For Share
-- Make Online Profile
+- Editing, updating and deleting option for the faculty, department, and users with their relevant information modification.
+- Searching option by the role-based access for the users such as faculty, admin within effective query and selective actions.
+- Highly user interface design with attractive for the users and the reports will have shown by the graphical and visual chart.
+- Personal email processing system for the users which is notifications by the student personal email and EC Coordinator email.
 
 ## Entity-Relationship-Diagram
 
-<!-- ![arc](erd_diagram.jpg?raw=true 'ERD_Diagram') -->
+<!-- ![arc](EERD.png?raw=true 'ERD_Diagram') -->
 
 ## Technologies and libraries
 
-- VSCode Editor
-- ES6+ Syntax
-- Async /Await
-- React Hooks
-- Redux With DevTools
-- Json Web Tokens (JWT)
-- Postman HTTP Client
-- Mongoose / MongoDB / Atlas
+- HTML5 & Bootstrap 3+
+- Laravel ^5 & ORM MySql
+- Ajax, jQuery and JSON.
 - Bcrypt Password Hashing
 - Heroku & Git Depeloyment
-- Node v10.16.3, NPM v6.9.0.
 
 ## Further Development
 
@@ -82,7 +71,7 @@ This is identified that the project developed as calling name EC_Cleam. The syst
 - Personal email processing within the mail notification system.
 - Refresh the authentication token when it will be expired.
 - Refactoring coding standard with live data loaded.
-- Testing plan implements with PHPUnit tools.
+- The testing plan implements with PHPUnit tools.
 
 ## How to run the System
 
@@ -92,24 +81,16 @@ This is identified that the project developed as calling name EC_Cleam. The syst
 - Then run this below comments
 
 ```sh
-$ git clone https://github.com/vorsurm/EC_Cleam.git
+$ git clone https://github.com/vorsurm/ECClaimApplication.git
 
-# Install dependencies for server
-npm install
-
-# Install dependencies for client
-npm run client-install
-
-# Run the client & server with concurrently
-npm run dev
-
-# Run the Express server only
-npm run server
-
-# Run the React client only
-npm run client
-
-# Server runs on http://localhost:5000 and client on http://localhost:3000
+$ cd ECClaimApplication
+$ composer install
+$ cp .env.example .env
+$ php artisan key:generate
+$ config .env file, below description
+$ php artisan migrate
+$ php artisan serve
+$ It\`s open a browser window with http://localhost:8000/login
 
 ```
 
@@ -119,79 +100,29 @@ npm run client
 
 ```
 
-mongoDB Config:
+MySQL Config:
 ==============
-https://cloud.mongodb.com
-- create a account
-- config mongoDB
-
-Connect to EC_Cleam:
-====================
-Node.js -> 3.0 or later
-Copy -> Connection String Only
-
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sev_system
+DB_USERNAME=username
+DB_PASSWORD=password
 
 ```
 
-- Browser opens up and runs with URL: `http://localhost:5000`
-- Login after Registration
-- create your profile.
-- post throught the browser.
-- share the link .
-
----
-
-## Questions and Answers
-
-### How would you deploy the above on AWS? (ideally, a rough architecture diagram will help)
-
-![arc](aws_deploy_diagram.jpg?raw=true 'Architecture')
-
-### Where do you see bottlenecks in your proposed architecture and how would you approach scaling this app starting from 100 reqs/day to 900MM reqs/day over 6 months?
-
-In this section, I am just trying to figure out from the AWS documentation and trying to follow the coding standard. Truly speaking that, I don't have any access AWS service but I used the s3 key, secret, region, bucket, and URL for image storage. Therefore, here is the suitable answers are following below.
-
-**_AWS Service Purpose_**
-
-- Used auto-scaling tools(configure: group name, min & max size, and availability zones)
-- Around 19 Regions (Availability Zones, used advantage from AWS global infrastructure)
-- Robust, used for fully featured technology infrastructure.
-- Used AWS building blocks (lambda, CloudFront, Elastic etc.)
-
-**_For Application Purpose_**
-
-- Application load balancer(session, logging, routing, and health check)
-- shift some load around (Used cache content)
-- Managed NoSQL database for lace schema
-- Service Oriented Architecture
-
-**_Users >1 Millions_**
-
-- Used Multi-AZ deployment
-- Elastic Load Balancing between tires
-- Used Auto Scaling tools
-- Service Oriented Architecture (SOA)
-- Serving Content Smartly(S3/ColudFront)
-- Caching off DB (configurations)
-- Moving state off tiers that auto scale
-
-**_Users >10 Millions_**
-
-- More fine-tuning of the full application
-- More SOA of features/functionality
-- Going from multi-Az to multi-region
-- Possibly start to build custom solutions
-- Deep analysis of the entire stack
-- Build serverless whenever possible
-
 ## Summary
 
-EC_Cleam is successfully developed and implemented also it's live now as a first version 1.0. After the hardworking and self-studying period, I would like to say, I learn very much from that project which was a totally new concept on the live streaming online channel with API integration. Therefore, It'a was very durable and helpful for me in every stage as a programmer, tester and the scrum master.
+EC Claim Application is successfully developed and implemented also it's live now as a first version 1.0. After the hardworking and self-studying period, I would like to say, the product will be achieved with full features and functionality for the initial requirements. In the end, The Students can use this application for their claim any assignment purpose.
 
 ## References
 
-- https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html
+- http://ecc.gov.ph/frequently-asked-questions/
 - https://aws.amazon.com/blogs/startups/scaling-on-aws-part-3-500k-users
 - https://laravel-json-api.readthedocs.io/en/latest/features/http-clients/
-- https://socialiteproviders.netlify.com/providers/twitch.html
+- https://www.innofied.com/top-10-laravel-best-practices/
 - https://www.quora.com/What-are-the-Laravel-best-practices
+
+```
+
+```
