@@ -31,11 +31,11 @@ This is identified that the project developed as calling name EC_Cleam. EC Claim
 
 ## The Advantages of System
 
-- The application is fully responsive for any kinds of a device such as mobile, tables and desktop browsers.
-- Navigation panel also responsible for very simple that is defined by the role-based with common icons which is very helpful for the users.
-- The full system is authenticated by the roles based and security is very high for the LARAVEL default authentication functions.
-- Validation and verification are fully considered of the full system application development which is shown the relevant error or success message.
-- Use highly strong Object Oriented Programming (OOP) LARAVEL5 PHP based framework and used Object-oriented Relational Model (ORM) for the database model design.
+- The application is fully responsive.
+- Navigation panel is defined by the role-based with common icons.
+- The system is authenticated by the roles based and security is very high.
+- Validation and verification are fully considered with the relevant error or success message.
+- LARAVEL5 PHP based framework and used Object-oriented Relational Model (ORM) for the database model design.
 
 ## The Limitations of System
 
@@ -43,14 +43,14 @@ This is identified that the project developed as calling name EC_Cleam. EC Claim
 - Faculty name, department name can’t have deleted through the role.
 - Any information can’t modify by the single click.
 - There is no way for user profile information updated features.
-- The system is not used emailing and notification process.
+- The system is not used another users.
 
 ## The System Features List
 
-- Editing, updating and deleting option for the faculty, department, and users with their relevant information modification.
-- Searching option by the role-based access for the users such as faculty, admin within effective query and selective actions.
-- Highly user interface design with attractive for the users and the reports will have shown by the graphical and visual chart.
-- Personal email processing system for the users which is notifications by the student personal email and EC Coordinator email.
+- Manage the faculty, department, and users with their relevant information.
+- Searching options with role-based access for faculty, admin within selective actions.
+- Highly user interface design with reports, graphical and visual chart.
+- Personal email processing system with real-time notifications.
 
 ## Entity-Relationship-Diagram
 
