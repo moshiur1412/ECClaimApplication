@@ -1,7 +1,5 @@
 # EC Claim Application
 
----
-
 EC Claim Application is the subsystem for the large university which is the based on the roles for collecting and processing of EC Claim. For building the web-based application. In this subsystem, there are four roles who access the system, admin can access the whole system with add assessment and the manager can see the whole system. On the other hand, the student can claim their department assessment subject and EC coordinator can access the EC claim accepted and rejected options. Therefore, the project live demo, repository, and screencast video are following below:
 
 **Version**: 1.0 Release of the EC Claim Application.
