@@ -17,7 +17,7 @@ class HomeController extends Controller
   public function __construct(Faculty $faculty, EcClaim $ecClaim)
   {
     $this->middleware('auth');
-    $this->faculty = $faculity;
+    $this->faculty = $faculty;
     $this->ecClaim = $ecClaim;
 
   }
@@ -36,7 +36,7 @@ class HomeController extends Controller
 
    $report_id = $request->report_id;
    $faculites_all = $this->faculty::all();
-   $faculity = $this->faculty::findOrFail($request->faculty_id);
+   $faculty = $this->faculty::findOrFail($request->faculty_id);
    $year = $request->academic_year;    
 
 
@@ -44,6 +44,6 @@ class HomeController extends Controller
 
    $claim_count = $this->ecClaim->where('evidence_01', '')->count();
    $date_expare = $this->ecClaim->where('status', 'Date has been expired.')->count();
-   return view('home', compact('faculites_all','faculity', 'year', 'report_id','claim_count', 'date_expare','claim_year'));
+   return view('home', compact('faculites_all','faculty', 'year', 'report_id','claim_count', 'date_expare','claim_year'));
  }
 }
