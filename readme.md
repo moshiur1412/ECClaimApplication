@@ -6,7 +6,11 @@ EC Claim Application is the subsystem for the large university which is the base
 
 - Application Live: https://live-ec-claim.herokuapp.com/
 - Screencast video for live demo presentation without audio:
-  <!-- <a href="https://www.useloom.com/share/5e7a93bd7aa64fc7b55a33b70b19a0e8"><img src="screencast_video.jpg" border="10" alt="SEV_System_Live_Demo" width="560" height="315" /></a> -->
+  <a href="https://www.useloom.com/share/5e7a93bd7aa64fc7b55a33b70b19a0e8"><img src="ec_claim_screencast_video.jpg" border="10" alt="SEV_System_Live_Demo" width="560" height="315" /></a>
+
+[![EC Claim](https://i9.ytimg.com/vi/Fw8XNQBg3KA/mq1.jpg)](https://www.youtube.com/watch?v=nX_inqaAzOI&feature=youtu.be&hd=1 'EcClaim Video')
+
+[![EC Claim](https://i9.ytimg.com/vi/Fw8XNQBg3KA/mq1.jpg)](https://youtu.be/Fw8XNQBg3KA 'EcClaim Video')
 
 ---
 
