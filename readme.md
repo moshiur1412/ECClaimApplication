@@ -54,7 +54,7 @@ This is identified that the project developed as calling name EC_Cleam. EC Claim
 
 ## Entity-Relationship-Diagram
 
-<!-- ![arc](EERD.png?raw=true 'ERD_Diagram') -->
+<!-- ![arc](eerd.jpg?raw=true 'ERD_Diagram') -->
 
 ## Technologies and libraries
 
