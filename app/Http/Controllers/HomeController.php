@@ -34,11 +34,7 @@ class HomeController extends Controller
    $year = $request->academic_year;    
 
 
-   $claim_year = DB::table('ec_claims')
-   ->select(DB::raw('YEAR(created_at) year'))
-   ->groupBy('year')
-   ->orderBy('year', 'desc')
-   ->get();
+   $claim_year = DB::table('ec_claims')->select(DB::raw('YEAR(created_at) year'))->groupBy('year')->orderBy('year', 'desc')->get();
 
    $claim_count = EcClaim::where('evidence_01', '')->count();
    $date_expare = EcClaim::where('status', 'Date has been expired.')->count();
